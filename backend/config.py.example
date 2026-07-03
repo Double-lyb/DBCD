@@ -1,8 +1,7 @@
 # ============================================================
 # config.py — 数据库连接配置 & 应用密钥
+# 使用方法：复制此文件为 config.py，填写自己的密钥
 # ============================================================
-# 使用说明：复制此文件为 config.py，填入真实配置后使用
-# cp config.py.example config.py
 
 # ---- OpenGauss 数据库连接 ----
 DB_CONFIG = {
@@ -14,12 +13,12 @@ DB_CONFIG = {
 }
 
 # ---- JWT 认证配置 ----
-SECRET_KEY = 'your-jwt-secret-key-here'
+SECRET_KEY = 'library-management-jwt-secret-key-2026'
 ALGORITHM = 'HS256'
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 # ---- 敏感字段 AES 加密密钥（OpenGauss gs_encrypt_aes128） ----
-ENCRYPTION_KEY = 'your-encryption-key-here'
+ENCRYPTION_KEY = 'library_db_encrypt_2026'
 
 # ---- 验证码配置 ----
 CAPTCHA_LENGTH = 4          # 验证码字符数
@@ -35,14 +34,15 @@ AI_MAX_TOKENS = 1000
 AI_TEMPERATURE = 0.7
 
 # AI Provider 配置（支持多供应商）
+# 请替换为自己的 API Key
 AI_PROVIDERS = {
     'deepseek': {
         'url': 'https://api.deepseek.com/v1/chat/completions',  # https://platform.deepseek.com/
-        'key': 'your-deepseek-api-key-here',
+        'key': 'YOUR_DEEPSEEK_API_KEY_HERE',
     },
     'siliconflow': {
         'url': 'https://api.siliconflow.cn/v1/chat/completions',  # https://cloud.siliconflow.cn/
-        'key': 'your-siliconflow-api-key-here',
+        'key': 'YOUR_SILICONFLOW_API_KEY_HERE',
     },
 }
 
