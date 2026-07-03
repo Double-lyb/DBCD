@@ -31,6 +31,8 @@ Desktop.ini
 *.env
 *.env.local
 config.local.*
+backend/config.py
+backend/ai/api_key.txt
 
 # ===== 临时文件 =====
 *.log
