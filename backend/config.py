@@ -35,12 +35,12 @@ AI_TEMPERATURE = 0.7
 # AI Provider 配置（支持多供应商）
 AI_PROVIDERS = {
     'deepseek': {
-        'url': 'https://api.deepseek.com/v1/chat/completions',
-        'key': '你的DeepSeek-API-Key',  # 请替换为自己的 Key
+        'url': 'https://api.deepseek.com/v1/chat/completions',  # https://platform.deepseek.com/
+        'key': 'sk-cc6be56026344d79a4bcdd4b1eab0058',
     },
     'siliconflow': {
-        'url': 'https://api.siliconflow.cn/v1/chat/completions',
-        'key': '你的SiliconFlow-API-Key',  # 请替换为自己的 Key
+        'url': 'https://api.siliconflow.cn/v1/chat/completions',  # https://cloud.siliconflow.cn/
+        'key': 'sk-ttuobebhqkcnffdlkatlkdkauajkbdzqnurdhhjsdfuddvde',
     },
 }
 
