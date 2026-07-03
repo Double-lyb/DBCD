@@ -31,6 +31,7 @@ Desktop.ini
 *.env
 *.env.local
 config.local.*
+backend/ai/api_key.txt
 
 # ===== 临时文件 =====
 *.log

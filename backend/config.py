@@ -36,11 +36,11 @@ AI_TEMPERATURE = 0.7
 AI_PROVIDERS = {
     'deepseek': {
         'url': 'https://api.deepseek.com/v1/chat/completions',
-        'key': 'sk-26fc332a899345b19fbec0f88bb9f947',
+        'key': '你的DeepSeek-API-Key',  # 请替换为自己的 Key
     },
     'siliconflow': {
         'url': 'https://api.siliconflow.cn/v1/chat/completions',
-        'key': 'sk-sltyujvhxnxkrreehfwrsydbrmcdpbnucksxglndfwgayyus',
+        'key': '你的SiliconFlow-API-Key',  # 请替换为自己的 Key
     },
 }
 
