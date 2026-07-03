@@ -1,0 +1,39 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+*.egg
+.venv/
+venv/
+env/
+
+# ===== Node / Vue =====
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== OS =====
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ===== 敏感配置 =====
+*.env
+*.env.local
+config.local.*
+
+# ===== 临时文件 =====
+*.log
+*.tmp
+~$*.docx
+~$*.xlsx

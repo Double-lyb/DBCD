@@ -1,0 +1,53 @@
+# ============================================================
+# config.py — 数据库连接配置 & 应用密钥
+# ============================================================
+
+# ---- OpenGauss 数据库连接 ----
+DB_CONFIG = {
+    'host': '127.0.0.1',
+    'port': 5432,
+    'database': 'library_db',
+    'user': 'gaussdb',
+    'password': 'Gauss123!',
+}
+
+# ---- JWT 认证配置 ----
+SECRET_KEY = 'library-management-jwt-secret-key-2026'
+ALGORITHM = 'HS256'
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+# ---- 敏感字段 AES 加密密钥（OpenGauss gs_encrypt_aes128） ----
+ENCRYPTION_KEY = 'library_db_encrypt_2026'
+
+# ---- 验证码配置 ----
+CAPTCHA_LENGTH = 4          # 验证码字符数
+CAPTCHA_EXPIRE_SECONDS = 300  # 5 分钟过期
+
+# ---- 备份配置 ----
+BACKUP_DIR = 'E:/大三下课程/数据库/DBCD/backend/backup'
+FULL_BACKUP_RETENTION = 4   # 保留最近 4 次全量备份
+
+# ---- AI 助手「拾墨」配置 ----
+AI_ENABLED = True
+AI_MAX_TOKENS = 1000
+AI_TEMPERATURE = 0.7
+
+# AI Provider 配置（支持多供应商）
+AI_PROVIDERS = {
+    'deepseek': {
+        'url': 'https://api.deepseek.com/v1/chat/completions',
+        'key': 'sk-26fc332a899345b19fbec0f88bb9f947',
+    },
+    'siliconflow': {
+        'url': 'https://api.siliconflow.cn/v1/chat/completions',
+        'key': 'sk-sltyujvhxnxkrreehfwrsydbrmcdpbnucksxglndfwgayyus',
+    },
+}
+
+# 模型列表（每个模型关联到对应的 provider）
+AI_MODEL = 'deepseek-v4-flash'  # 默认模型（付费快速）
+AI_MODELS = [
+    {'id': 'deepseek-v4-flash', 'name': 'DeepSeek V4 Flash', 'desc': '付费模型，响应快质量高', 'provider': 'deepseek'},
+    {'id': 'deepseek-ai/DeepSeek-R1-0528-Qwen3-8B', 'name': 'DeepSeek-R1 (8B)', 'desc': '免费，推理能力强', 'provider': 'siliconflow'},
+    {'id': 'Qwen/Qwen3.5-4B', 'name': 'Qwen3.5 (4B)', 'desc': '免费，轻量快速', 'provider': 'siliconflow'},
+]
